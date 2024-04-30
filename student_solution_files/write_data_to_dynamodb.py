@@ -34,17 +34,17 @@ def lambda_handler(event, context):
     # on a unique value to prevent errors when writing to DynamoDB. **
     
     # --- Insert your code here ---
-    rid = None # <--- Replace this value with your code.
+    rid = random.randint(1, 1000000000) # <--- Replace this value with your code.
     # -----------------------------
     
     # ** Instantiate the DynamoDB service with the help of the boto3 library **
     
     # --- Insert your code here ---
-    dynamodb = None # <--- Replace this value with your code.
+    dynamodb = boto3.resource('dynamodb') # <--- Replace this value with your code.
     # -----------------------------
     
     # Instantiate the table. Remember pass the name of the DynamoDB table created in step 4
-    table = dynamodb.Table('# Insert the name of your generated DynamoDB table here')
+    table = dynamodb.Table('2401FTDE-NONDUB-portfolio-data-table')
     
     # ** Write the responses to the table using the put_item method. **
 
