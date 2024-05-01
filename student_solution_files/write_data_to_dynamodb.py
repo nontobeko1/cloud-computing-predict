@@ -18,6 +18,7 @@
 import boto3    # Python AWS SDK
 import json     # Used for handling API-based data.
 import base64   # Needed to decode the incoming POST data
+from botocore.exceptions import ClientError # Catch errors on client side
 
 def lambda_handler(event, context):
     
